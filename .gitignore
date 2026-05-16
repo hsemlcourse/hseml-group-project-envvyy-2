@@ -57,8 +57,9 @@ Thumbs.db
 
 # Experiments
 experiments/*.log
-experiments/*.png
-experiments/*.csv
+# experiments/*.png  (keep in repo for submission)
+# experiments/*.csv  (keep in repo for submission)
+experiments/feature_importance.csv
 experiments/*.tsv
 mlruns/
 

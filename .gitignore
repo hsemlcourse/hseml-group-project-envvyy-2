@@ -57,7 +57,31 @@ Thumbs.db
 
 # Experiments
 experiments/*.log
+experiments/*.png
+experiments/*.csv
+experiments/*.tsv
 mlruns/
+
+# CatBoost training artifacts
+catboost_info/
+
+# Ruff cache
+.ruff_cache/
+
+# Run scripts (auto-generated)
+run_all.py
+run_eda.py
+
+# Data processed (generated outputs)
+data/processed/best_model.pkl
+data/processed/encoders.pkl
+data/processed/pca_model.pkl
+data/processed/scaler.pkl
+data/processed/X_*.csv
+data/processed/y_*.csv
+
+# Notebooks outputs
+notebooks/*.ipynb
 
 # Docker
 .dockerignore

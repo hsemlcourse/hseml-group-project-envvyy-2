@@ -1,7 +1,8 @@
 import sys
-sys.path.insert(0, 'src')
-from data_loader import load_twitch_data
 from pathlib import Path
+
+sys.path.insert(0, "src")
+from data_loader import load_twitch_data
 
 data_path = Path("data/raw/twitchdata-update.csv")
 if data_path.exists():

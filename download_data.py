@@ -74,10 +74,8 @@ def main() -> None:
     if existing.exists():
         print(f"\n[INFO] Датасет уже существует: {existing}")
         print(f"   Размер: {existing.stat().st_size / 1024:.1f} KB")
-        response = input("\nПерезаписать? (y/N): ").strip().lower()
-        if response != "y":
-            print("Отмена.")
-            return
+        print("   Используем существующий файл.")
+        return
 
     # Try Kaggle API first
     success = download_with_kaggle_api(output_dir)

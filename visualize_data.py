@@ -54,12 +54,12 @@ def plot_eda(df: pd.DataFrame, output_path: Path) -> None:
         ax.set_ylabel("Average Viewers")
         ax.grid(True, alpha=0.3)
 
-    # 4. Top games
-    if "Game" in df.columns:
+    # 4. Top languages
+    if "Language" in df.columns:
         ax = axes[1, 0]
-        top_games = df["Game"].value_counts().head(10)
-        top_games.plot(kind="barh", ax=ax, color="steelblue")
-        ax.set_title("Топ-10 игр по количеству стримеров")
+        top_langs = df["Language"].value_counts().head(10)
+        top_langs.plot(kind="barh", ax=ax, color="steelblue")
+        ax.set_title("Топ-10 языков по количеству стримеров")
         ax.set_xlabel("Количество стримеров")
         ax.grid(True, alpha=0.3, axis="x")
 
@@ -170,7 +170,7 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # EDA plots
-    data_path = Path("data/raw/twitchdata.csv")
+    data_path = Path("data/raw/twitchdata-update.csv")
     if data_path.exists():
         df = load_twitch_data(data_path)
         print(f"\n[VIZ] Создание EDA графиков для {len(df)} строк...")

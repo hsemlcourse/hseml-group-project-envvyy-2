@@ -33,7 +33,7 @@ def main():
     print("=" * 80)
 
     # Load data
-    data_path = RAW_DATA_DIR / "twitchdata.csv"
+    data_path = RAW_DATA_DIR / "twitchdata-update.csv"
     if not data_path.exists():
         print(f"\n❌ Файл не найден: {data_path}")
         print("Пожалуйста, загрузите датасет используя download_data.py")

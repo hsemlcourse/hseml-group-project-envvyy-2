@@ -46,8 +46,8 @@ def create_engagement_features(df: pd.DataFrame) -> pd.DataFrame:
         df_new["follower_per_hour"] = df_new["Followers"] / (df_new["Stream time(minutes)"] / 60 + 1)
 
     # Watch time per stream (average session length)
-    if "Watch time(Minutes)" in df_new.columns and "Streams" in df_new.columns:
-        df_new["watch_per_stream"] = df_new["Watch time(Minutes)"] / (df_new["Streams"] + 1)
+    if "Watch time(Minutes)" in df_new.columns and "Stream time(minutes)" in df_new.columns:
+        df_new["watch_per_stream"] = df_new["Watch time(Minutes)"] / (df_new["Stream time(minutes)"] + 1)
 
     # Viewers per follower
     if "Average viewers" in df_new.columns and "Followers" in df_new.columns:

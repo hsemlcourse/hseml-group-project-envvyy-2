@@ -119,7 +119,7 @@ def main() -> None:
     print("=" * 80)
 
     # ── Load data ──────────────────────────────────────────────────────────────
-    data_path = Path("data/raw/twitchdata.csv")
+    data_path = Path("data/raw/twitchdata-update.csv")
     if not data_path.exists():
         print(f"\n[ERROR] Файл не найден: {data_path}")
         print("Пожалуйста, загрузите данные: python download_data.py")

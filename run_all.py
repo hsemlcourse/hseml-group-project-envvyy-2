@@ -39,11 +39,9 @@ def main():
     print("3. Визуализацию результатов")
     print("\n" + "="*80)
     
-    input("\nНажмите Enter для продолжения...")
-    
     # Check if data exists
     from pathlib import Path
-    data_path = Path("data/raw/twitchdata.csv")
+    data_path = Path("data/raw/twitchdata-update.csv")
     if not data_path.exists():
         print("\n❌ ОШИБКА: Датасет не найден!")
         print(f"Пожалуйста, загрузите данные в: {data_path}")

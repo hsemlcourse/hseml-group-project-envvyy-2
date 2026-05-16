@@ -12,7 +12,7 @@ except ImportError:
     print("\n[ERROR] Kaggle API не установлена. Установите: pip install kaggle")
     print("\nАльтернативно скачайте вручную:")
     print("  1. https://www.kaggle.com/datasets/aayushmishra1512/twitchdata")
-    print("  2. Download → распакуйте → переименуйте CSV в data/raw/twitchdata.csv")
+    print("  2. Download → распакуйте → переименуйте CSV в data/raw/twitchdata-update.csv")
     sys.exit(1)
 
 
@@ -45,10 +45,10 @@ def download_with_kaggle_api(output_dir: Path) -> bool:
         )
         print(f"[KAGGLE] Датасет загружен в: {output_dir}")
 
-        # Find and rename CSV
+        # Find and rename CSV to twitchdata-update.csv (the larger dataset with ~1000 rows)
         csv_files = list(output_dir.glob("*.csv"))
         if csv_files:
-            target = output_dir / "twitchdata.csv"
+            target = output_dir / "twitchdata-update.csv"
             # Remove target if exists
             if target.exists():
                 target.unlink()
@@ -64,13 +64,13 @@ def download_with_kaggle_api(output_dir: Path) -> bool:
 def main() -> None:
     """Download Twitch dataset."""
     print("=" * 80)
-    print("ЗАГРУЗКА ДАТАСЕТА TWITCH")
+    print("ЗАГРУЗКА ДАТАСЕТА TWITCH (1000+ стримеров)")
     print("=" * 80)
 
     output_dir = Path("data/raw")
 
     # Check if data already exists
-    existing = output_dir / "twitchdata.csv"
+    existing = output_dir / "twitchdata-update.csv"
     if existing.exists():
         print(f"\n[INFO] Датасет уже существует: {existing}")
         print(f"   Размер: {existing.stat().st_size / 1024:.1f} KB")
@@ -92,8 +92,8 @@ def main() -> None:
         print("\n2. Нажмите 'Download' и скачайте ZIP архив")
         print("\n3. Распакуйте содержимое в папку:")
         print(f"   {output_dir}")
-        print("\n4. Убедитесь что CSV файл называется 'twitchdata.csv'")
-        print(f"\n5. Проверьте наличие файла: {output_dir / 'twitchdata.csv'}")
+        print("\n4. Убедитесь что CSV файл называется 'twitchdata-update.csv'")
+        print(f"\n5. Проверьте наличие файла: {output_dir / 'twitchdata-update.csv'}")
         print("\n" + "=" * 80)
 
 

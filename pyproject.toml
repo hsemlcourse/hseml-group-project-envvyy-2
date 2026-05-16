@@ -2,7 +2,7 @@
 name = "twitch-popularity-prediction"
 version = "0.1.0"
 description = "Прогнозирование популярности стримеров Twitch"
-authors = [{name = "Student"}]
+authors = [{name = "Envvyy"}]
 requires-python = ">=3.10"
 dependencies = [
     "pandas>=2.2.0",

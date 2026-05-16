@@ -173,7 +173,7 @@ def main() -> None:
     data_path = Path("data/raw/twitchdata-update.csv")
     if data_path.exists():
         df = load_twitch_data(data_path)
-        print(f"\n[VIZ] Создание EDA графиков для {len(df)} строк...")
+        print(f"\n[VIZ] Creating EDA plots for {len(df)} rows...")
         plot_eda(df, output_dir / "viz_eda.png")
     else:
         print(f"\n[ERROR] Датасет не найден: {data_path}")

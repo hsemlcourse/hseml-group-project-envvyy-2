@@ -1,0 +1,19 @@
+Stream time(minutes)
+Peak viewers
+Average viewers
+Followers
+Followers gained
+Views gained
+Partnered
+Mature
+Language
+avg_viewers
+follower_viewer_ratio
+peak_avg_ratio
+follower_per_hour
+watch_per_stream
+viewers_per_follower
+log_Followers
+log_Average_viewers
+log_Peak_viewers
+log_Watch_time(Minutes)
